@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<!--
+    WELCOME TO THE STRIVE TEAM GENERATOR!
+
+    In this app you will generate teams and assign the participants to them.
+    You will use the Bootstrap components for the elements of your app.
+
+    The features are the following:
+   
+
+
+    - The user should be able to set the number of teams he wants, so that they will be generated. A team is just another list to be displayed.
+
+    - An "Assign" button will be required in order to launch the team generation functionality.
+
+    - Every time the user clicks on the "Assign" button, a random name is placed in a team and removed from the initial list.
+    - Each team should be inside a "column" to be responsive.
+    - [EXTRA] Create a button to remove a user from a team, and putting him back in the main list, waiting to be reassigned.
+    - [EXTRA] Create a button to reset the state of the app.
+-->
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+      crossorigin="anonymous"
+    />
+    <!-- Style CSS -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+  </head>
+  <body>
+
+    <!-- Header -->
+    <nav class=" header navbar navbar-expand-lg fixed-top navbar-dark d-felx " style="height:140px;text-align: center">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><img class=" img-fluid img-height" src="musicsize.png" alt=""></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-between pl-5" id="navbarSupportedContent" style="text-align: center;">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 pl-5 headerul">
+              <li class="nav-item">
+                <a class="nav-link" style="color: #dc6b35;" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item px-5">
+                <a class="nav-link" href="#">Generator</a>
+              </li>
+            </ul>
+            <form class="search " style="padding-right: 20px;">
+              <input class="form-control" style="border-radius: 50px;padding-right: 30px;" type="text" placeholder="Search" aria-label="Search">
+              <button><img src="search_icon.png"></button>
+            </form>
+          </div>
+        </div>
+      </nav>
+
+      <br>
+
+    <!-- - The user should be able to add a list of names, find a way to get the user input and fill a list with the new name. -->
+
+
+      <!-- About Us -->
+      <section id="about" class="jumbotron text-center py-5">
+        <div class="container">
+          <h1 class="jumbotron-heading about-text">Team Generator</h1>
+          <br>
+          <p class="lead text-muted">Welcome to Random Team Generator</p>
+
+          <br>
+          
+
+            <div class="container">
+                <div class="row">
+                    <div class="col col-6">
+                        <hr>
+                        <p class="lead text-muted text-center px-5" style="font-size: large;">Click to Add Participant Name</p>
+                        <input type="text" id="participantInput" placeholder="Name of Participant">
+                    
+                    <button class="mt-3" type="button" onclick="addNewParticipant()">Add to the list</button>
+                    <ul id="participants">
+                        
+                    </ul id='teamNames'>
+                        <hr>
+                    </div>
+
+                    <div class="col col-6">
+                        <hr>
+                        <p class="lead text-muted text-center px-5" style="font-size: large;">Click to add Number of Teams</p>
+                        <input type="number" id="teamnumber" max='6' min='1' value="1">
+            
+                    <button class="mt-3" type="button" onclick="numberOfTeams()">Number of Teams</button>                
+                    <ul id="teams">
+                        
+                    </ul>
+                        <hr>
+                    </div>
+                </div>
+            </div>           
+        </div>
+      </section>
+
+
+    <div class="assign-button">
+        <button class="mt-3" type="button" onclick="assign();assignment()">Assign Teams</button>        
+     </div>
+
+    
+
+     <div id="assignedteams">
+
+     </div>
+
+
+  
+
+ 
+       
+ 
+   
+  
+    
+
+
+
+
+
+
+
+
+
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>
