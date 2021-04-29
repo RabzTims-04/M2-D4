@@ -76,66 +76,50 @@
           <br>
           <p class="lead text-muted">Welcome to Random Team Generator</p>
 
-          <br>
-          
+          <br>          
 
             <div class="container">
                 <div class="row">
-                    <div class="col col-6">
+
+                    <div class="col-12 col-6 col-sm-6">
                         <hr>
                         <p class="lead text-muted text-center px-5" style="font-size: large;">Click to Add Participant Name</p>
                         <input type="text" id="participantInput" placeholder="Name of Participant">
-                    
-                    <button class="mt-3" type="button" onclick="addNewParticipant()">Add to the list</button>
-                    <ul id="participants">
-                        
-                    </ul id='teamNames'>
-                        <hr>
+                        <button class="mt-3" type="button" onclick="addNewParticipant()">Add to the list</button>
+                        <ul id="participants">
+
+                        </ul>                        
                     </div>
 
-                    <div class="col col-6">
-                        <hr>
+                    <div class="col-12 col-6 col-sm-6">
+                      <hr>
                         <p class="lead text-muted text-center px-5" style="font-size: large;">Click to add Number of Teams</p>
-                        <input type="number" id="teamnumber" max='6' min='1' value="1">
-            
-                    <button class="mt-3" type="button" onclick="numberOfTeams()">Number of Teams</button>                
-                    <ul id="teams">
-                        
-                    </ul>
-                        <hr>
+                        <input type="number" id="teamnumber" max='4' min='1' value="1">
+                        <button class="mt-3" type="button" onclick=" createTeams()">Number of Teams</button>
+                        <ul class="display-flex" id="teams">
+
+                        </ul>                          
                     </div>
+
                 </div>
             </div>           
         </div>
       </section>
+<br>
 
+      <button class="assign-button" type="button" onclick="assign()">Assign Teams</button> 
+      <br>
+      <div class="container mt-5">        
+          <div class="col-12">
+            <div class="row" id='teams-row'></div>
 
-    <div class="assign-button">
-        <button class="mt-3" type="button" onclick="assign();assignment()">Assign Teams</button>        
-     </div>
-
-    
-
-     <div id="assignedteams">
-
-     </div>
-
-
-  
-
- 
-       
- 
-   
-  
-    
-
-
-
-
-
-
-
+            
+            <ul id="teamassign"></ul>  
+          </div>
+        </div>
+      </div>
+     
+      <br>           
 
 
     <script

@@ -10,7 +10,7 @@ body{
 }
 
 .header{
-background:rgb(22, 21, 21);
+background:rgb(0, 0, 0);
 padding: 23px 0px;
 border-top: #dc6b35 solid 5px;
 }
@@ -62,17 +62,32 @@ button{
     cursor: pointer;
 }
 
-.listNames{
+#participants li{
     color: black;
     background-color: #e9ecef;
     list-style-type:none;
-    text-align:left;
+    text-align:center;
+}
+
+.listTeams{
+    color: black;
+    background-color: #e9ecef;
+    list-style-type:none;
+    text-align:center;
+}
+
+li.listNames{
+    background-color: black;
+    color:#dc6b35 ;
+    text-align: left;
+    list-style-type:none;
+
 }
 
 button{
     background-color: black;
     color:#dc6b35 ;
-    width: 200px;
+    width: 216px;
     height: 50px;
     font-weight: bold;
 }
@@ -89,12 +104,8 @@ input{
 }
 
 .assign-button{
-    text-align: center;
-    width: 200px;
-    height: 50px;
-    padding-left: 50%;
-    padding-top: 13%;
-    transform: translateX(-20%);
+    margin-left: 50%;
+    transform: translateX(-50%);
 }
 
 #about{
@@ -120,7 +131,7 @@ h1{
     height: 100px;
     }
 
-    .btn{
+.btn{
         padding-top: 10px;
         background-color: #dc6b35 ;
         color:#060607 ;
@@ -140,5 +151,10 @@ h1{
 
 #about p{
     font-size:x-large
+}
+
+.team ul li{
+    background-color: black;
+    color: #dc6b35;
 }
 
